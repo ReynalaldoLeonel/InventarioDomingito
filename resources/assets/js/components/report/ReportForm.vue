@@ -1,12 +1,11 @@
 <template>
 	<div class="row">
-
 		<div class="col-md-4">
 			<div class="input-group">
 				<div class="form-line">
 					<select class="form-control select2" name="type" required="" v-model="report_type" v-select="report_type">
-						<option :value="''">Chose Report Type *</option>
-						<option :value="'stock'">Stock Report</option>
+						<option :value="''">Elegir tipo de informe *</option>
+						<option :value="'stock'">Informe de existencias</option>
 						<option :value="'sell'">Sell Report</option>
 						<option :value="'profit'">Profit Report</option>
 						<option :value="'due'">Due Report</option>
@@ -15,7 +14,6 @@
 				</div>
 			</div>
 		</div>
-
 		<div class="col-md-4">
 			<div class="input-group">
 				<div class="form-line">
@@ -24,7 +22,6 @@
 				</div>
 			</div>
 		</div>
-
 		<div class="col-md-4">
 			<div class="input-group">
 				<div class="form-line">
@@ -33,20 +30,17 @@
 				</div>
 			</div>
 		</div>
-
-
 		<div class="col-md-4" v-if="!isEnable">
 			<div class="input-group">
 				<div class="form-line">
 					<select class="form-control select2" name="category_id" v-model="category_id" v-select="category_id"
 						v-on:change="findProduct">
-						<option value="">Chose Category (optional)</option>
+						<option value="">holaa Chose Category (optional)</option>
 						<option v-for="value in category" :value="value.id">{{ value.name }}</option>
 					</select>
 				</div>
 			</div>
 		</div>
-
 		<div class="col-md-4" v-if="!isEnable">
 			<div class="input-group">
 				<div class="form-line">
@@ -58,8 +52,6 @@
 				</div>
 			</div>
 		</div>
-
-
 		<div class="col-md-4" v-if="!isEnable">
 			<div class="input-group">
 				<div class="form-line">
@@ -70,7 +62,6 @@
 				</div>
 			</div>
 		</div>
-
 		<div class="col-md-4" v-if="!isEnable">
 			<div class="input-group">
 				<div class="form-line">
@@ -81,8 +72,6 @@
 				</div>
 			</div>
 		</div>
-
-
 		<div class="col-md-4">
 			<div class="input-group">
 				<div class="form-line">
@@ -93,8 +82,6 @@
 				</div>
 			</div>
 		</div>
-
-
 		<div class="col-md-4">
 			<div class="input-group">
 				<div class="form-line">
@@ -105,14 +92,9 @@
 				</div>
 			</div>
 		</div>
-
-
 	</div>
 </template>
-
-
 <script>
-
 import { EventBus } from '../../vue-asset';
 import Datepicker from 'vuejs-datepicker';
 import mixin from '../../mixin.js';
@@ -120,12 +102,9 @@ import mixin from '../../mixin.js';
 export default {
 	props: ['category', 'user', 'customer', 'vendor'],
 	components: {
-
 		'vuejs-datepicker': Datepicker,
-
 	},
 	mixins: [mixin],
-
 	data() {
 
 		return {
@@ -137,26 +116,17 @@ export default {
 
 			product: [],
 			chalan: [],
-
-
-
 		}
-
 	},
-
 	methods: {
 
 		findProduct() {
 			this.product = [];
 			axios.get(base_url + 'category/product/' + this.category_id)
 				.then(response => {
-
 					this.product = response.data;
-
 				})
 		},
-
-
 		findStock() {
 
 			this.chalan = [];
@@ -166,22 +136,12 @@ export default {
 					this.chalan = response.data;
 
 				})
-
-
-
 		},
-
-
-
 	},
-
 	computed: {
 		isEnable() {
 			return this.report_type === 'invoice' || this.report_type === 'due';
-
 		}
 	}
-
 }
-
 </script>

@@ -26,7 +26,7 @@
               <th>Nombre</th>
               <th>Correo electrónico</th>
               <th>Rol</th>
-              <th>Editar</th>
+              <th>Actualizar</th>
               <th>Eliminar</th>
             </tr>
           </thead>
