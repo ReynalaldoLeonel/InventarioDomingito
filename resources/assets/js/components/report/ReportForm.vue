@@ -1,12 +1,12 @@
 <template>
 	<div class="row">
-		<div class="col-md-4">
+		<div class="col-md-44">
 			<div class="input-group">
 				<div class="form-line">
 					<select class="form-control select2" name="type" required="" v-model="report_type" v-select="report_type">
 						<option :value="''">Elegir tipo de informe *</option>
 						<option :value="'stock'">Informe de existencias</option>
-						<option :value="'sell'">Sell Report</option>
+						<option :value="'sell'">Reporte de Venta</option>
 						<option :value="'profit'">Profit Report</option>
 						<option :value="'due'">Due Report</option>
 						<option :value="'invoice'">Invoice Report</option>

@@ -39,13 +39,13 @@
               <td>
                 <button @click="editVendor(value.id)" type="button"
                   class="btn bg-blue btn-circle waves-effect waves-circle waves-float">
-                  <i class="material-icons">edit</i>
+                  <i class="material-icons">Editar</i>
                 </button>
               </td>
               <td>
                 <button @click="deleteVendor(value.id)" type="button"
                   class="btn bg-pink btn-circle waves-effect waves-circle waves-float">
-                  <i class="material-icons">delete</i>
+                  <i class="material-icons">Eliminar</i>
                 </button>
               </td>
             </tr>
