@@ -1,6 +1,6 @@
 <template>
 	<div class="row">
-		<div class="col-md-44">
+		<div class="col-md-4">
 			<div class="input-group">
 				<div class="form-line">
 					<select class="form-control select2" name="type" required="" v-model="report_type" v-select="report_type">

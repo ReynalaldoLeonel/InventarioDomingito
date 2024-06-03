@@ -87,7 +87,7 @@
 						<div class="modal-footer">
 							<br>
 							<button type="submit" class="btn btn-success waves-effect">Guardar</button>
-							<button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cancelarrr</button>
+							<button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cancelar</button>
 						</div>
 					</div>
 				</form>
